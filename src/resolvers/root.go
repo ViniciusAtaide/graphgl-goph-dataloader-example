@@ -2,7 +2,6 @@ package resolvers
 
 import (
 	"errors"
-	"log"
 
 	"github.com/graph-gophers/graphql-go"
 	"github.com/jmoiron/sqlx"
@@ -51,7 +50,6 @@ func (r *RootResolver) Notes(args struct{ UserID graphql.ID }) ([]*NoteResolver,
 		return nil, err
 	}
 
-	log.Println(notes)
 	for _, note := range notes {
 		noteRxs = append(noteRxs, &NoteResolver{note})
 	}

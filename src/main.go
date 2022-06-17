@@ -35,8 +35,6 @@ func main() {
 
 	schema := graphql.MustParseSchema(schemaString, &resolvers.RootResolver{Db: *db})
 
-	dataloaders.Config(db)
-
 	type JSON = map[string]interface{}
 
 	http.Handle("/query", &relay.Handler{Schema: schema})
