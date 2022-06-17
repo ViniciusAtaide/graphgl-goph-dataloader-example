@@ -11,7 +11,6 @@ import (
 	"github.com/graph-gophers/graphql-go/relay"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/lib/pq"
-	"github.com/viniciusataide/graphql-go-example/src/dataloaders"
 	"github.com/viniciusataide/graphql-go-example/src/resolvers"
 )
 
