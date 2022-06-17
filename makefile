@@ -16,4 +16,4 @@ create:
 	migrate create -ext sql -dir migrations -seq $(FILE)
 
 dev:
-	./bin/air --build.cmd "go run src/main.go"
+	./bin/air
